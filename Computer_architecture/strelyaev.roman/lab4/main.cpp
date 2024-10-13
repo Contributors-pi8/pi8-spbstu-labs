@@ -16,7 +16,17 @@ int main()
 	start = timer1.now();
 	for (long long i = 0; i < loopCount; ++i)
 	{
-		__asm {   // непосредственная адресация
+		__asm
+		{   // непосредственная адресация
+			add eax, 10
+			add eax, 10
+			add eax, 10
+			add eax, 10
+			add eax, 10
+			add eax, 10
+			add eax, 10
+			add eax, 10
+			add eax, 10
 			add eax, 10
 		}
 	}
@@ -27,7 +37,17 @@ int main()
 	start = timer1.now();
 	for (long long i = 0; i < loopCount; ++i)
 	{
-		__asm { // Регистровая адресация
+		__asm
+		{ // Регистровая адресация
+			add eax, ebx
+			add eax, ebx
+			add eax, ebx
+			add eax, ebx
+			add eax, ebx
+			add eax, ebx
+			add eax, ebx
+			add eax, ebx
+			add eax, ebx
 			add eax, ebx
 		}
 	}
@@ -38,43 +58,28 @@ int main()
 	start = timer1.now();
 	for (long long i = 0; i < loopCount; ++i)
 	{
-		__asm { // Косвенно-регистровая адресация. Предполагает, что в регистре находится не сам операнд, а его адрес в памяти
+		__asm
+		{ // Косвенно-регистровая адресация. Предполагает, что в регистре находится не сам операнд, а его адрес в памяти
+			add eax, [ebx]
+			add eax, [ebx]
+			add eax, [ebx]
+			add eax, [ebx]
+			add eax, [ebx]
+			add eax, [ebx]
+			add eax, [ebx]
+			add eax, [ebx]
+			add eax, [ebx]
 			add eax, [ebx]
 		}
 	}
 	end = timer1.now();
 	std::cout << "3 loop time in ms: "
 		<< std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << '\n';
-	
-	start = timer1.now();
-	{
-		int arr[4][3] = {	1, 2, 3,
-							4, 5, 6,
-							7, 8, 9,
-							10, 11, 12 };
-		__asm
-		{
-			lea ebx, arr
-			xor ecx, ecx
-			xor eax, eax
-			mov edx, 12
-		}
-		for (long long i = 0; i < loopCount; ++i)
-		{
-			__asm { // Косвенно-регистровая адресация. Предполагает, что в регистре находится не сам операнд, а его адрес в памяти
-
-				add eax, [ebx + ecx * 4]
-			}
-		}
-		end = timer1.now();
-		std::cout << "4 loop time in ms: "
-			<< std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << '\n';
-		// Базово-индексная адресация со смещением.  Адрес = базовый регистр + индексный регистр + смещение: mov eax, [rbx + rcx*4 + 8]
-	}
+		
 	int arr[4][3] = {1, 2, 3,
-					 4, 5, 6,
-					 7, 8, 9,
-					 10, 11, 12};
+					 				 4, 5, 6,
+					 				 7, 8, 9,
+					 				 10, 11, 12};
 	int digit = 3; // число, которое будем заменять йоу
 	std::cout << "before:\n";
 	for (int i = 0; i < 4; i++)
