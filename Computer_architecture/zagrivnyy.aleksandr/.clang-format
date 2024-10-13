@@ -1,0 +1,64 @@
+---
+BasedOnStyle: Microsoft
+AlignAfterOpenBracket: DontAlign
+AlignArrayOfStructures: Right
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+AlwaysBreakTemplateDeclarations: Yes
+BitFieldColonSpacing: After
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: false
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+BreakBeforeBinaryOperators: NonAssignment
+BreakConstructorInitializers: AfterColon
+BreakInheritanceList: AfterColon
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 2
+FixNamespaceComments: false
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: <[A-Za-z0-9]+>
+    Priority: 1
+  - Regex: <.*>
+    Priority: 2
+  - Regex: '"[[:alnum:].]+"'
+    Priority: 3
+IndentWidth: 2
+InsertBraces: true
+InsertNewlineAtEOF: true
+IntegerLiteralSeparator:
+  Binary: -1
+  Decimal: -1
+  Hex: -1
+NamespaceIndentation: All
+PackConstructorInitializers: Never
+QualifierAlignment: Left
+SeparateDefinitionBlocks: Always
+SpaceAfterTemplateKeyword: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: false
+SpaceInEmptyBlock: true
+SpacesBeforeTrailingComments: 5
+SpacesInAngles: Always
+SpacesInContainerLiterals: false
+Standard: c++14
+TabWidth: 2
