@@ -1,9 +1,9 @@
 //
-// Created by alexz on 14.10.2024.
+// Created by Aleksandr Zagrivnyy on 14.10.2024.
 //
 
-#include <stdio.h>
 #include <conio.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -15,16 +15,16 @@ int main(void)
   int far *secondPtr = (int *)second;
 
   asm {
-    push es
+    push es           ; сохраняем значения сегментов в стек
     push ds
 
-    cld
-    mov cx,10
+    cld               ; устанавливаем direction flag на 0
+    mov cx,10         ; задаем счетчик для цикла
 
     lds si,firstPtr
     les di,secondPtr
 
-    rep movsw
+    rep movsw       ; циклично проходимся по массиву со сдвигом 2 байта
 
     pop ds
     pop es

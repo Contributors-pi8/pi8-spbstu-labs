@@ -1,5 +1,5 @@
 //
-// Created by alexz on 14.10.2024.
+// Created by Aleksandr Zagrivnyy on 14.10.2024.
 //
 
 #include <cstdio>
