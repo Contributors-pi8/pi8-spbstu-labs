@@ -79,7 +79,24 @@ int main()
     now /= fact(i);
     sum += now;
   }
+  std::cout << "\n\n###\nNewton: " << sum << "\n###\n";
 
-  std::cout << "\n\n###\nresult: " << sum << "\n###\n";
+  sum = 0;
+  for (int i = 0; i < pointNumber; ++i)
+  {
+      long double now = points[0][i];
+      for (int j = 0; j < pointNumber; ++j)
+      {
+        if (j == i)
+          ++j;
+        if (j < pointNumber)
+        {
+          now *= x - (x0  + h * j);
+          now /= (x0 + h * i) - (x0 + h * j);
+        }
+      }
+      sum += now;
+  }
+  std::cout << "Lagrange: " << sum << "\n###\n";
   return 0;
 }
