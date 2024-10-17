@@ -14,10 +14,10 @@ public class Main {
             fh.setFormatter(formatter);
             logger.setUseParentHandlers(false);
         } catch (IOException e) {
-            logger.severe("иоехепншн");
+            logger.severe("иоехепншн");fddf
         }
     }
-    
+
     public static void main(String[] args) {
         try {
             Class<?> targetClass = Class.forName("MethodClass");
@@ -40,6 +40,8 @@ public class Main {
             logger.severe("ИнстантиалиатионЕхепшн");
         } catch (NoSuchMethodException e) {
             logger.severe("дурак");
+        } finally {
+            
         }
     }
 }
