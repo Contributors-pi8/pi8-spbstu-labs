@@ -40,6 +40,8 @@ public class CoolClass {
 //                else {
 //                    method.invoke(instanse); // uncomment if you wanna see "open" methods also
 //                }
+                method.setAccessible(false);
+
             }
         } catch (ClassNotFoundException | IllegalArgumentException | InvocationTargetException | IllegalAccessException | SecurityException | NoSuchMethodException e) {
             logger.error(e);
