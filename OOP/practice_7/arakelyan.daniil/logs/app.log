@@ -1,5 +1,6 @@
-2024-10-17 20:08:00 [main] INFO  express.Main - main. startiing!
-2024-10-17 20:08:00 [main] INFO  express.Main - starting creating methods from some class
-2024-10-17 20:08:00 [main] INFO  express.Main - invoking method getThree
-2024-10-17 20:08:00 [main] INFO  express.Main - invoking method getTwo
-2024-10-17 20:08:00 [main] INFO  express.Main - end of function that creating methods from some class
+2024-10-17 20:42:40 [main] INFO  express.Main - main. startiing!
+2024-10-17 20:42:40 [main] INFO  express.CoolClass - starting creating methods from some class
+2024-10-17 20:42:40 [main] INFO  express.CoolClass - invoking method getThree
+2024-10-17 20:42:40 [main] INFO  express.CoolClass - invoking method getTwo
+2024-10-17 20:42:40 [main] INFO  express.CoolClass - end of function that creating methods from some class
+2024-10-17 20:42:40 [main] INFO  express.Main - end

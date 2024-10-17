@@ -9,7 +9,7 @@ import java.lang.reflect.Modifier;
 
 public class CoolClass {
 
-    private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final Logger logger = LogManager.getLogger(CoolClass.class);
 
     public void getAllMethodsFromSomeClass(String className) {
 
