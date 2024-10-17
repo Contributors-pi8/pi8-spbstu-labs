@@ -1,0 +1,193 @@
+Determining the location of the ModelSim executable...
+
+Using: C:/intelFPGA_lite/23.1std/questa_fse/win64
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off rs -c rs --vector_source="C:/Users/alexz/Documents/Quartus/lab3/Waveform6.vwf" --testbench_file="C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim/Waveform6.vwf.vht"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Copyright (C) 2024  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Fri Oct 18 01:14:58 2024
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off rs -c rs --vector_source=C:/Users/alexz/Documents/Quartus/lab3/Waveform6.vwf --testbench_file=C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim/Waveform6.vwf.vht
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim/" rs -c rs
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Copyright (C) 2024  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Fri Oct 18 01:14:59 2024
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim/ rs -c rs
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file rs.vho in folder "C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4620 megabytes
+    Info: Processing ended: Fri Oct 18 01:14:59 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim/rs.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+C:/intelFPGA_lite/23.1std/questa_fse/win64/vsim -c -do rs.do
+
+Reading pref.tcl
+
+
+# 2023.3
+
+
+# do rs.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Errors: 0, Warnings: 1
+
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+
+# Start time: 01:15:01 on Oct 18,2024
+# vcom -work work rs.vho 
+
+# -- Loading package STANDARD
+
+# -- Loading package TEXTIO
+
+# -- Loading package std_logic_1164
+
+# -- Loading package VITAL_Timing
+
+# -- Loading package VITAL_Primitives
+
+# -- Loading package maxii_atom_pack
+
+# -- Loading package maxii_components
+
+# -- Compiling entity d_trigger_pov
+
+# -- Compiling architecture structure of d_trigger_pov
+
+# End time: 01:15:01 on Oct 18,2024, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+
+# Start time: 01:15:01 on Oct 18,2024
+# vcom -work work Waveform6.vwf.vht 
+
+# -- Loading package STANDARD
+
+# -- Loading package TEXTIO
+
+# -- Loading package std_logic_1164
+
+# -- Compiling entity d_trigger_pov_vhd_vec_tst
+
+# -- Compiling architecture d_trigger_pov_arch of d_trigger_pov_vhd_vec_tst
+
+# End time: 01:15:01 on Oct 18,2024, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# vsim -voptargs="+acc" -c -t 1ps -L maxii -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.d_trigger_pov_vhd_vec_tst 
+# Start time: 01:15:01 on Oct 18,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.d_trigger_pov_vhd_vec_tst(d_trigger_pov_arch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading maxii.maxii_atom_pack(body)
+# Loading maxii.maxii_components
+# Loading work.d_trigger_pov(structure)#1
+# Loading ieee.std_logic_arith(body)
+# Loading maxii.maxii_io(behave)#1
+# Loading maxii.maxii_lcell(vital_le_atom)#1
+# Loading maxii.maxii_asynch_lcell(vital_le)#1
+# Loading maxii.maxii_lcell_register(vital_le_reg)#1
+# Loading maxii.maxii_io(behave)#2
+
+# after#32
+
+# End time: 01:15:03 on Oct 18,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/alexz/Documents/Quartus/lab3/Waveform6.vwf...
+
+Reading C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim/rs.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to C:/Users/alexz/Documents/Quartus/lab3/simulation/qsim/rs_20241018011503.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

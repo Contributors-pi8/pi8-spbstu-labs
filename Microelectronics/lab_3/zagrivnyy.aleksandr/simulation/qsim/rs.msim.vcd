@@ -1,0 +1,98 @@
+$comment
+	File created using the following command:
+		vcd file rs.msim.vcd -direction
+$end
+$date
+	Fri Oct 18 01:15:03 2024
+$end
+$version
+	Questa Intel Starter FPGA Edition Version 2023.3
+$end
+$timescale
+	1ps
+$end
+
+$scope module d_trigger_pov_vhd_vec_tst $end
+$var wire 1 ! clk $end
+$var wire 1 " d $end
+$var wire 1 # q $end
+
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var wire 1 ' devoe $end
+$var wire 1 ( devclrn $end
+$var wire 1 ) devpor $end
+$var wire 1 * ww_devoe $end
+$var wire 1 + ww_devclrn $end
+$var wire 1 , ww_devpor $end
+$var wire 1 - ww_d $end
+$var wire 1 . ww_clk $end
+$var wire 1 / ww_q $end
+$var wire 1 0 \clk~combout\ $end
+$var wire 1 1 \d~combout\ $end
+$var wire 1 2 \q~reg0_regout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+1%
+x&
+1'
+1(
+1)
+1*
+1+
+1,
+0-
+0.
+0/
+00
+01
+02
+$end
+#30000
+1!
+1.
+10
+#40000
+0!
+0.
+00
+#50000
+1"
+1-
+11
+#110000
+1!
+1.
+10
+12
+1/
+1#
+#120000
+0!
+0.
+00
+#150000
+0"
+0-
+01
+#200000
+1!
+1.
+10
+02
+0/
+0#
+#210000
+0!
+0.
+00
+#250000
