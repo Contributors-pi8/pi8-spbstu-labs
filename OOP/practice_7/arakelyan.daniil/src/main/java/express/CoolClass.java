@@ -47,7 +47,7 @@ public class CoolClass {
             logger.error(e);
         }
 
-        logger.info("finishing creating methods from some class");
+        logger.info("end of function that creating methods from some class");
     }
 
     private Object getDefaultValue(Class type) {
