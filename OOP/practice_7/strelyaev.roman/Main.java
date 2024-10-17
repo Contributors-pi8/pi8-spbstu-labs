@@ -14,7 +14,7 @@ public class Main {
             fh.setFormatter(formatter);
             logger.setUseParentHandlers(false);
         } catch (IOException e) {
-            logger.severe("иоехепншн");fddf
+            logger.severe("иоехепншн");
         }
     }
 
