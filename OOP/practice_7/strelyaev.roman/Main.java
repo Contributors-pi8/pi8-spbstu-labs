@@ -17,7 +17,7 @@ public class Main {
             logger.severe("иоехепншн");
         }
     }
-
+    
     public static void main(String[] args) {
         try {
             Class<?> targetClass = Class.forName("MethodClass");
@@ -40,8 +40,6 @@ public class Main {
             logger.severe("ИнстантиалиатионЕхепшн");
         } catch (NoSuchMethodException e) {
             logger.severe("дурак");
-        } finally {
-            
         }
     }
 }
