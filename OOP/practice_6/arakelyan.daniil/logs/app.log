@@ -1,0 +1,8 @@
+2024-10-17 20:31:25 [main] INFO  express.Main - starting
+2024-10-17 20:31:25 [main] INFO  express.Main - get names from file name: name1 name2
+2024-10-17 20:31:25 [main] INFO  express.Main - reading game stats from file
+2024-10-17 20:31:25 [main] INFO  express.Main - line from file: 1. b4 a2
+2024-10-17 20:31:25 [main] INFO  express.Main - line from file: 2. g4 g2
+2024-10-17 20:31:25 [main] INFO  express.Main - line from file: 3. g6 h6
+2024-10-17 20:31:25 [main] INFO  express.Main - line from file: result: 1/2 - 1/2
+2024-10-17 20:31:25 [main] INFO  express.Main - done
