@@ -13,7 +13,16 @@ jobs:
       - name: Determine changed directories
         id: changes
         run: |
-          CHANGED_DIRS=$(git diff --name-only ${{ github.sha }} ${{ github.event.before }} | grep -E '^OOP/lab_[0-9]+/[a-zA-Z.]+/|^OOP/practice_[0-9]+/[a-zA-Z.]+/' | cut -d'/' -f1,2 | sort -u)
+          if [ $GITHUB_BASE_REF ]; then
+            git fetch origin ${{ github.base_ref }} ${{ github.event.pull_request.head.ref }}
+            FORK_POINT=$( git show-branch --merge-base "origin/${{ github.base_ref }}" "origin/${{ github.event.pull_request.head.ref }}" )
+            LATEST_COMMIT_IN_PR=${{ github.event.pull_request.head.sha }}
+            CHANGED_DIRS=$(git diff --name-only $FORK_POINT $LATEST_COMMIT_IN_PR | grep -E '^OOP/lab_[0-9]+/[a-zA-Z.]+/|^OOP/practice_[0-9]+/[a-zA-Z.]+/' | cut -d'/' -f1,2 | sort -u)
+          else
+            CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+            echo "Changes for PUSH" 
+            echo "Diff between ${{ github.event.before }} and ${{ github.event.after }}"
+          fi
 
           if [ -n "$CHANGED_DIRS" ]; then
             echo "Changed directories: $CHANGED_DIRS"
@@ -34,7 +43,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'temuriun'
+          distribution: 'temurin'
           architecture: x64
 
       - name: Setup Gradle
