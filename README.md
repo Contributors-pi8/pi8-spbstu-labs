@@ -1,18 +1,15 @@
 <div align="center">
   <h3>СПбПУ ─ Программная инжинерия ─ Группа №8</h3>
+  
+  [![GitHub stars](https://badgen.net/github/stars/Contributors-pi8/pi8-spbstu-labs)](https://github.com/Contributors-pi8/pi8-spbstu-labs/stargazers/)
+  [![GitHub forks](https://badgen.net/github/forks/Contributors-pi8/pi8-spbstu-labs)](https://GitHub.com/Contributors-pi8/pi8-spbstu-labs/network/)
+  [![GitHub contributors](https://badgen.net/github/contributors/Contributors-pi8/pi8-spbstu-labs)](https://GitHub.com/Contributors-pi8/pi8-spbstu-labs/graphs/contributors/)
+  [![GitHub latest commit](https://badgen.net/github/last-commit/Contributors-pi8/pi8-spbstu-labs)](https://GitHub.com/Contributors-pi8/pi8-spbstu-labs/commit/)
   <br />
 
   ![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
   ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
   ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-
-  <br />
-
-  [![GitHub stars](https://badgen.net/github/stars/Contributors-pi8/pi8-spbstu-labs)](https://github.com/Contributors-pi8/pi8-spbstu-labs/stargazers/)
-  [![GitHub forks](https://badgen.net/github/forks/Contributors-pi8/pi8-spbstu-labs)](https://GitHub.com/Contributors-pi8/pi8-spbstu-labs/network/)
-  [![GitHub contributors](https://badgen.net/github/contributors/Contributors-pi8/pi8-spbstu-labs)](https://GitHub.com/Contributors-pi8/pi8-spbstu-labs/graphs/contributors/)
-  [![GitHub latest commit](https://badgen.net/github/last-commit/Contributors-pi8/pi8-spbstu-labs)](https://GitHub.com/Contributors-pi8/pi8-spbstu-labs/commit/)
-
 </div>
 <hr />
 
@@ -43,7 +40,7 @@
 Мы приветствуем любой вклад в развитие нашего репозитория! Прочитайте наше [Руководство по внесению вклада](CONTRIBUTING.md) чтобы начать.
 
 ## Contributors
-Этот проект существует благодаря всем людям, которые вносят свой вклад.
+Этот репозиторий существует благодаря всем людям, которые вносят свой вклад.
 
 <a href="https://github.com/Contributors-pi8/pi8-spbstu-labs/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Contributors-pi8/pi8-spbstu-labs" alt="Contributors" />
