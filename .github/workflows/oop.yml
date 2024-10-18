@@ -7,7 +7,7 @@ jobs:
   check-dirs:
     runs-on: ubuntu-latest
     outputs:
-      dirs: steps.changes.outputs.dirs
+      dirs: ${{ steps.changes.outputs.dirs }}
     steps:
       - name: Checkout 
         uses: actions/checkout@v4
@@ -19,9 +19,9 @@ jobs:
             git fetch origin ${{ github.base_ref }} ${{ github.event.pull_request.head.ref }}
             FORK_POINT=$( git show-branch --merge-base "origin/${{ github.base_ref }}" "origin/${{ github.event.pull_request.head.ref }}" )
             LATEST_COMMIT_IN_PR=${{ github.event.pull_request.head.sha }}
-            CHANGED_DIRS=$(git diff --name-only $FORK_POINT $LATEST_COMMIT_IN_PR | grep -E '^OOP/lab_[0-9]+/[a-zA-Z.]+/|^OOP/practice_[0-9]+/[a-zA-Z.]+/' | cut -d'/' -f1,2 | sort -u)
+            CHANGED_DIRS=$(git diff --name-only $FORK_POINT $LATEST_COMMIT_IN_PR | grep -E '^OOP/lab_[0-9]+/[a-zA-Z.]+/|^OOP/practice_[0-9]+/[a-zA-Z.]+/' | cut -d'/' -f1,2,3 | sort -u)
           else
-            CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+            CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep -E '^OOP/lab_[0-9]+/[a-zA-Z.]+/|^OOP/practice_[0-9]+/[a-zA-Z.]+/' | cut -d'/' -f1,2,3 | sort -u)
             echo "Changes for PUSH" 
             echo "Diff between ${{ github.event.before }} and ${{ github.event.after }}"
           fi
