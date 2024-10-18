@@ -6,6 +6,8 @@ on:
 jobs:
   check-dirs:
     runs-on: ubuntu-latest
+    outputs:
+      dirs: steps.changes.outputs.dirs
     steps:
       - name: Checkout 
         uses: actions/checkout@v4
@@ -26,7 +28,7 @@ jobs:
 
           if [ -n "$CHANGED_DIRS" ]; then
             echo "Changed directories: $CHANGED_DIRS"
-            echo "::set-output name=dirs::$CHANGED_DIRS"
+            echo "dirs=$CHANGED_DIRS" >> $GITHUB_OUTPUT
           else
             echo "No relevant changes found"
             exit 0
@@ -51,7 +53,7 @@ jobs:
 
       - name: Build each lab with Gradle
         run: |
-          for DIR in ${{ needs.check-dirs.steps.changes.outputs.dirs }}; do
+          for DIR in ${{ needs.check-dirs.outputs.dirs }}; do
             echo "Running build in $DIR"
             cd $DIR
             gradle build
