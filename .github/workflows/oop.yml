@@ -31,11 +31,13 @@ jobs:
             echo "dirs=$CHANGED_DIRS" >> $GITHUB_OUTPUT
           else
             echo "No relevant changes found"
+            echo "dirs=no-dirs" >> $GITHUB_OUTPUT
             exit 0
           fi
 
   build:
     runs-on: ubuntu-latest
+    if: ${{ needs.check-dirs.outputs.dirs != 'no-dirs' }} 
     needs: check-dirs
     steps:
       - name: Checkout 
