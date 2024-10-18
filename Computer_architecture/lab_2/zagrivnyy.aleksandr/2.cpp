@@ -1,7 +1,3 @@
-//
-// Created by Aleksandr Zagrivnyy on 13.10.2024.
-//
-
 #include <cstdio>
 
 int main()
