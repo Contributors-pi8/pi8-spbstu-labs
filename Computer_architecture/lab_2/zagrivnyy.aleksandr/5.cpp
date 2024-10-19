@@ -1,7 +1,3 @@
-//
-// Created by Aleksandr Zagrivnyy on 15.10.2024.
-//
-
 #include <conio.h>
 
 int main(void)
@@ -16,7 +12,7 @@ int main(void)
     push ds
 
     cld         ; устанавливаем direction flag на 0
-    mov cx,400  ; задаем счетчик для цикла
+    mov cx,256  ; задаем счетчик для цикла
 
     lds si,src
     les di,dest

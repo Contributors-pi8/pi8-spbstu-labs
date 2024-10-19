@@ -1,7 +1,3 @@
-//
-// Created by Aleksandr Zagrivnyy on 14.10.2024.
-//
-
 #include <conio.h>
 #include <stdio.h>
 
