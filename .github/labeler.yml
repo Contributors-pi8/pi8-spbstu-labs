@@ -12,4 +12,4 @@ Java:
     - any-glob-to-any-file: OOP/**
 "Repository Changes":
   - changed-files:
-    - any-glob-to-any-file: '*'
+    - any-glob-to-any-file: ['*', '.github/**']
