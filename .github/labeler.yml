@@ -3,16 +3,13 @@
     - any-glob-to-any-file: Computer_architecture/**
 Maths:
   - changed-files:
-    - any-glob-to-any-file: Computational_mathematics/**
+    - any-glob-to-any-file: ["Computational_mathematics/**", "math/**"]
 Microelectronics:
   - changed-files:
     - any-glob-to-any-file: Microelectronics/**
 Java:
   - changed-files:
     - any-glob-to-any-file: OOP/**
-Maths:
-  - changed-files:
-    - any-glob-to-any-file: math/**
 "Repository Changes":
   - changed-files:
     - any-glob-to-any-file: ['*', '.github/**']
