@@ -10,6 +10,9 @@ Microelectronics:
 Java:
   - changed-files:
     - any-glob-to-any-file: OOP/**
+Maths:
+  - changed-files:
+    - any-glob-to-any-file: math/**
 "Repository Changes":
   - changed-files:
     - any-glob-to-any-file: ['*', '.github/**']
