@@ -31,8 +31,20 @@ jobs:
           fi
 
           if [ -n "$CHANGED_DIRS" ]; then
-            echo "Changed directories: $CHANGED_DIRS"
-            echo "dirs=$CHANGED_DIRS" >> $GITHUB_OUTPUT
+            for dir in $CHANGED_DIRS; do
+              if find "$dir" -type f -name "build.gradle*" | grep -q .; then
+                CHANGED_DIRS_WITH_GRADLE+="$dir "
+              fi
+            done
+            
+            if [ -n "$CHANGED_DIRS_WITH_GRADLE" ]; then
+              echo "Changed directories with Gradle build files: $CHANGED_DIRS_WITH_GRADLE"
+              echo "dirs=$CHANGED_DIRS_WITH_GRADLE" >> $GITHUB_OUTPUT
+            else
+              echo "No relevant changes found with Gradle build files"
+              echo "dirs=no-dirs" >> $GITHUB_OUTPUT
+              exit 0
+            fi
           else
             echo "No relevant changes found"
             echo "dirs=no-dirs" >> $GITHUB_OUTPUT

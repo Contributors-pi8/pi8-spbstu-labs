@@ -3,7 +3,7 @@
     - any-glob-to-any-file: Computer_architecture/**
 Maths:
   - changed-files:
-    - any-glob-to-any-file: Computational_mathematics/**
+    - any-glob-to-any-file: ["Computational_mathematics/**", "math/**"]
 Microelectronics:
   - changed-files:
     - any-glob-to-any-file: Microelectronics/**
