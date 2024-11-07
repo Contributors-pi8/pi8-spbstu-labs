@@ -1,0 +1,8 @@
+окт. 31, 2024 6:09:22 PM org.example.Main main
+INFO: Starting main
+окт. 31, 2024 6:09:22 PM org.example.Main main
+INFO: Get file app/file.xml
+окт. 31, 2024 6:09:22 PM org.example.Main main
+INFO: Parsing app/file.xml file
+окт. 31, 2024 6:09:22 PM org.example.Main main
+INFO: Writing file app/file.xml to file.json
