@@ -1,0 +1,3 @@
+[submodule "sem_1/aap"]
+	path = sem_1/aap
+	url = git@github.com:SlivkaSadovka/spbspu-labs-2023-aap-a.git
