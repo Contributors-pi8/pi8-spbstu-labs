@@ -10,7 +10,7 @@
 
 ```
 .
-└── sem_##/
+└── sem_#/
     └── subject/
         ├── conspects/
         │   └── ...
