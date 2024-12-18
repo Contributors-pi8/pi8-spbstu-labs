@@ -4,3 +4,6 @@
 [submodule "sem_2/aads"]
 	path = sem_2/aads
 	url = git@github.com:SlivkaSadovka/spbspu-labs-2024-aads-a.git
+[submodule "sem_2/tp"]
+	path = sem_2/tp
+	url = git@github.com:AlexZagric/spbspu-labs-2024-tp-a.git
