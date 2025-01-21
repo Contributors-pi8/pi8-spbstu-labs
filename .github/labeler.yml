@@ -1,15 +1,15 @@
 "Computer Architecture":
   - changed-files:
-    - any-glob-to-any-file: */computer_architecture/**
+    - any-glob-to-any-file: "**/computer_architecture/**"
 Maths:
   - changed-files:
-    - any-glob-to-any-file: ["*/computational_mathematics/**", "*/maths/**"]
+    - any-glob-to-any-file: ["**/computational_mathematics/**", "**/maths/**"]
 Microelectronics:
   - changed-files:
-    - any-glob-to-any-file: */microelectronics/**
+    - any-glob-to-any-file: "**/microelectronics/**"
 Java:
   - changed-files:
-    - any-glob-to-any-file: */oop/**
+    - any-glob-to-any-file: "**/oop/**"
 "Repository Changes":
   - changed-files:
-    - any-glob-to-any-file: ['*', '.github/**']
+    - any-glob-to-any-file: ["*", ".github/**"]
