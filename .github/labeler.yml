@@ -1,10 +1,12 @@
 "Computer Architecture":
   - '**/computer_architecture/**'
 Maths:
-  - any: ['**/computational_mathematics/**', '**/maths/**']
+  - '**/computational_mathematics/**'
+  - '**/maths/**'
 Microelectronics:
   - '**/microelectronics/**'
 Java:
   - '**/oop/**'
 "Repository Changes":
-  - any: ['*', '.github/**']
+  - '*'
+  - '.github/**'
